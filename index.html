@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		@font-face{
+		font-family: main;
+		src: url(2.ttf);
+		}
+
+		.boxs {
+			height: 64px;
+			width: 64px;
+			background-color: white;
+			border: 5px double;
+			position: absolute;
+			font-size: 13px;
+			text-align: center;
+			margin-top: 5px;
+			
+			
+		}
+		.firsBox {
+			background-color: white;
+			background-image: url(frog.png);
+			background-size: cover;
+
+			
+		}
+
+		.toilet{
+			display: none;
+			
+		}
+
+		.boxst {
+			height: 64px;
+			width: 64px;
+			background-color: white;
+			border: 5px double;
+			position: absolute;
+			font-size: 13px;
+			text-align: center;
+			margin-top: 5px;
+			
+			
+		}
+
+	</style>
+</head>
+<body style="font-family: main; background: black;" class="body">
+	<div style="position: absolute; left: 720px; top: 315px;">
+		<img src="dice.png" class="bt" style="width: 70px;">	
+		</div>	
+
+		<div style="position: absolute; left: 720px; top: 315px; display: none;" class="haha">
+			<img src="dice.png" style="width: 70px;">
+		</div>
+		<div class="boxs firsBox" style="left: 400px; top: 5px;">
+			<h4>finish</h4>
+		</div>
+		<div class="boxs" style="left: 480px; top: 5px;">1</div>
+		<div class="boxs" style="left: 560px; top: 5px;">2</div>
+		<div class="boxs" style="left: 640px; top: 5px; background-color: #C40C15; color: white;">
+			<img src="toilet.png" style="height: 52px;">
+		</div>
+		
+		<div class="boxs" style="left: 720px; top: 5px;">4</div> 
+		<div class="boxs" style="left: 800px; top: 5px; background: green; color: white;">5</div>
+		<div class="boxs" style="left: 880px; top: 5px;">6</div>
+		<div class="boxs" style="left: 960px; top: 5px;">7</div>
+
+		<div class="boxs" style="left: 1040px; background-color: red; top: 5px; color: white;">8</div>
+		<div class="boxs" style="left: 1040px; top: 80px;" >9</div>
+		<div class="boxs" style="left: 1040px; top: 155px;">10</div>
+		<div class="boxs" style="left: 1040px; top: 235px; background-color: #C40C15; color: white;">
+			<img src="toilet.png" style="height: 52px;">
+		</div>
+
+		<div class="boxs" style="left: 1040px; top: 315px;">12 
+			<p></p>
+		</div>
+		<div class="boxs" style="left: 1040px; top: 395px">13</div>
+		<div class="boxs" style="left: 1040px; top: 475px; background: green; color: white;">14</div>	
+		<div class="boxs" style="left: 1040px; top: 555px; background-color: #C40C15; color: white;">
+			<img src="toilet.png" style="height: 52px;">
+		</div>		
+
+		<div class="boxs" style="left: 1040px; top: 635px">16</div>
+		<div class="boxs" style="left: 960px; top: 635px">17</div>
+		<div class="boxs" style="left: 880px; top: 635px">18</div>
+		<div class="boxs" style="left: 800px; top: 635px; background: red;  color: white;">19</div>
+
+		<div class="boxs" style="left: 720px; top: 635px">20</div>
+		<div class="boxs" style="left: 640px; top: 635px">21</div>
+		<div class="boxs" style="left: 560px; top: 635px">22</div>
+		<div class="boxs" style="left: 480px; top: 635px; background: green; color: white;">23</div>
+
+		<div class="boxs" style="left: 400px; top: 635px">24</div>
+		<div class="boxs" style="left: 400px; top: 555px">25</div>
+		<div class="boxs" style="left: 400px; top: 475px">26</div>
+		<div class="boxs" style="left: 400px; top: 395px">27</div>
+
+		<div class="boxs" style="left: 400px; top: 315px; background-color: #C40C15; color: white;">
+			<img src="toilet.png" style="height: 52px;">
+		</div>
+		<div class="boxs" style="left: 400px; top: 235px">29</div>
+		<div class="boxs" style="left: 400px; top: 155px">30</div>	
+		<div class="boxs" style="left: 400px; top: 80px; background: red; color: white;">31</div>
+
+		<div class="boxs toilet t1" style="left: 640px; top: 80px;">
+			
+		</div>
+		<div class="boxs toilet t2" style="left: 960px; top: 235px;"></div>
+		<div class="boxs toilet t3" style="left: 960px; top: 555px;"></div>
+		<div class="boxs toilet t4" style="left: 480px; top: 315px;"></div>
+
+
+		
+		<!--последние дивы-->
+		
+
+	
+
+<script type="text/javascript">
+
+
+	let b = document.querySelectorAll(".boxs");
+	let step = 0;
+	let t1 = document.querySelector(".t1");
+	let haha = document.querySelector(".haha");
+	let t2 = document.querySelector(".t2");
+	let t3 = document.querySelector(".t3");
+	let t4 = document.querySelector(".t4");
+
+
+
+		
+  	
+
+  	let cube = document.querySelector(".bt");
+
+  	cube.onclick = function(){
+  		let r = Math.random();
+	  	let n = r * 6;
+	  	let index = Math.round(n);
+	  	alert(index);
+	  	b[step].style.backgroundImage = "none";
+	  	step = step + index;
+
+	  	
+
+	  	if (step == 3) {
+	  		alert("Пока тебе не выпадет 6 ты не выберешься с туалета!! ");
+	  		t1.style.display = "block";
+	  		t1.style.backgroundImage = "url(cry.png)";
+	  		t1.style.backgroundSize = "cover";
+	  		haha.style.display = "block";
+	  		cube.style.display = "none";
+	  		step = -100;
+	  		
+	  	 }
+
+	  	 if (step == -100) {
+  			haha.onclick = function(){
+	  		let r = Math.random();
+		  	let n = r * 6;
+		  	let random = Math.round(n);
+
+		  	if (random == 6) {
+		  	step = 4;
+		  	alert(random);
+		  	alert("Ты выбрался из туалета, luckyyyy!!");
+		  	b[step].style.backgroundImage = "url(frog.png)";
+		  	b[step].style.backgroundSize = "cover";
+
+		  	t1.style.backgroundImage = "none";
+		  	t1.style.display = "none";
+		  	haha.style.display = "none";
+		  	cube.style.display = "block";
+		  }
+			if (random < 6) {
+			  	alert(random);
+			 }
+			  	
+			 }
+  		}
+
+  		if (step == 5) {
+	  		alert("Ты наткнулся на бустер!! Держи +2 шага!!!");
+	  		step = 7;
+	  	}
+
+	  	if (step == 8) {
+	  		alert("Хехеххехе, -2")
+	  		step = 6;
+	  	}
+
+	  	if (step == 11) {
+	  		alert("Пока тебе не выпадет 6 ты не выберешься с туалета!! ");
+	  		t2.style.display = "block";
+	  		t2.style.backgroundImage = "url(cry.png)";
+	  		t2.style.backgroundSize = "cover";
+	  		haha.style.display = "block";
+	  		cube.style.display = "none";
+	  		step = -99;
+	  		
+	  	 }
+
+	  	  if (step == -99) {
+  			haha.onclick = function(){
+	  		let r = Math.random();
+		  	let n = r * 6;
+		  	let random = Math.round(n);
+
+		  	if (random == 6) {
+		  	step = 12;
+		  	alert(random);
+		  	alert("Ты выбрался из туалета, lucky nerd!");
+		  	b[step].style.backgroundImage = "url(frog.png)";
+		  	b[step].style.backgroundSize = "cover";
+
+		  	t2.style.backgroundImage = "none";
+		  	t2.style.display = "none";
+		  	haha.style.display = "none";
+		  	cube.style.display = "block";
+		  }
+			if (random < 6) {
+			  	alert(random);
+			 }
+			  	
+			 }
+  		}
+
+  		if (step == 14) {
+	  		alert("Ты наткнулся на лучший бустер в поле!! Держи +3 шага!!!");
+	  		step = 17;
+	  	}
+
+  		if (step == 15) {
+	  		alert("Пока тебе не выпадет 6 ты не выберешься с туалета!! ");
+	  		t3.style.display = "block";
+	  		t3.style.backgroundImage = "url(cry.png)";
+	  		t3.style.backgroundSize = "cover";
+	  		haha.style.display = "block";
+	  		cube.style.display = "none";
+	  		step = -98;
+	  		
+	  	 }
+
+	  	 if (step == -98) {
+  			haha.onclick = function(){
+	  		let r = Math.random();
+		  	let n = r * 6;
+		  	let random = Math.round(n);
+
+		  	if (random == 6) {
+		  	step = 16;
+		  	alert(random);
+		  	alert("Ты выбрался из туалета, lucky nerd!");
+		  	b[step].style.backgroundImage = "url(frog.png)";
+		  	b[step].style.backgroundSize = "cover";
+
+		  	t3.style.backgroundImage = "none";
+		  	t3.style.display = "none";
+		  	haha.style.display = "none";
+		  	cube.style.display = "block";
+		  }
+			if (random < 6) {
+			  	alert(random);
+			 }
+			  	
+			 }
+  		}
+
+  		if (step == 19) {
+	  		alert("Я колдую тебе минус, бугага! -2")
+	  		step = 17;
+	  	}
+
+	  	if (step == 23) {
+	  		alert("Ты наткнулся на бустер!! Держи +2 шага!!!");
+	  		step = 25;
+	  	}
+
+	  	if (step == 28) {
+	  		alert("Пока тебе не выпадет 6 ты не выберешься с туалета!! ");
+	  		t4.style.display = "block";
+	  		t4.style.backgroundImage = "url(cry.png)";
+	  		t4.style.backgroundSize = "cover";
+	  		haha.style.display = "block";
+	  		cube.style.display = "none";
+	  		step = -97;
+	  		
+	  	 }
+
+	  	 if (step == -97) {
+  			haha.onclick = function(){
+	  		let r = Math.random();
+		  	let n = r * 6;
+		  	let random = Math.round(n);
+
+		  	if (random == 6) {
+		  	step = 29;
+		  	alert(random);
+		  	alert("Ты выбрался из последнего туалета, у тебя хорошие нервы если ты проделал этот путь!!");
+		  	b[step].style.backgroundImage = "url(frog.png)";
+		  	b[step].style.backgroundSize = "cover";
+
+		  	t4.style.backgroundImage = "none";
+		  	t4.style.display = "none";
+		  	haha.style.display = "none";
+		  	cube.style.display = "block";
+		  }
+			if (random < 6) {
+			  	alert(random);
+			 }
+			  	
+			 }
+  		}
+
+  		if (step == 31) {
+	  		alert("Даа, я само зло!! Ахаххахаха -2");
+	  		step = 29;
+	  		
+	  	}
+
+	  	if (step > 31) {
+	  		alert("<3");
+	  		document.querySelector(".body").style.display = "none";
+
+	  	}
+
+
+	  	 
+
+	  	b[step].style.backgroundImage = "url(frog.png)";
+	  	b[step].style.backgroundSize = "cover";
+
+	  	
+  	}
+
+
+      
+
+</script>
+
+</script>
+		
+</body>
+</html>
+
+
+
+
+
+
